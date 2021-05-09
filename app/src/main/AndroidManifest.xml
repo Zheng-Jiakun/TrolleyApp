@@ -20,6 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".WebPage">
+            <intent-filter>
+                <action android:name="WebPage"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".NFCActivity">
+
+        </activity>
     </application>
 
 </manifest>
