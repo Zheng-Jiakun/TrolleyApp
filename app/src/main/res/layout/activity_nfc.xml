@@ -17,23 +17,42 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:stretchColumns= "0, 1" >
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="63dp">
+            android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_span="2"
+                android:gravity="center|center_vertical"
+                android:text="Please tap the trolley!"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_span="1"
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="WiFi" />
+                android:layout_height="50dp"
+                android:text="WiFi"
+                android:textSize="34sp" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:layout_span="1"
+                android:id="@+id/textViewWiFi"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="50dp"
+                android:text="null"
+                android:textSize="34sp" />
         </TableRow>
 
         <TableRow
@@ -43,14 +62,16 @@
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="BLE" />
+                android:layout_height="50dp"
+                android:text="BLE"
+                android:textSize="34sp" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/textViewBLE"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="50dp"
+                android:text="null"
+                android:textSize="34sp" />
         </TableRow>
 
         <TableRow
@@ -60,31 +81,54 @@
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Battery" />
+                android:layout_height="50dp"
+                android:text="Battery"
+                android:textSize="34sp" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/textViewBat"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="50dp"
+                android:text="null"
+                android:textSize="34sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="42dp">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="IP" />
+                android:layout_height="50dp"
+                android:text="IP"
+                android:textSize="34sp" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textViewIP"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_height="50dp"
+                android:text="null"
+                android:textSize="34sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="MAC"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/textViewMAC"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="null"
+                android:textSize="34sp" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

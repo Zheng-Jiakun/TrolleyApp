@@ -10,6 +10,7 @@ import android.nfc.tech.Ndef;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +29,7 @@ public class NFCActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nfc);
 
-        mContent = findViewById(R.id.textView8);
+        mContent = findViewById(R.id.textViewMAC);
     }
 
     @Override
@@ -64,12 +65,17 @@ public class NFCActivity extends AppCompatActivity {
 
     @Override
     public void onNewIntent(Intent intent) {
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "Detected!",
+                Toast.LENGTH_SHORT);
+        toast.show();
+
         //1.获取Tag对象
         Tag detectedTag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
         //2.获取Ndef的实例
         Ndef ndef = Ndef.get(detectedTag);
-        mTagText = "type:" + ndef.getType();
-        mTagText += "\nmaxsize:" + ndef.getMaxSize() + "bytes";
+//        mTagText = "type:" + ndef.getType();
+//        mTagText += "\nmaxsize:" + ndef.getMaxSize() + "bytes";
         readNfcTag(intent);
         mContent.setText(mTagText);
     }
@@ -93,8 +99,9 @@ public class NFCActivity extends AppCompatActivity {
                 if (msgs != null) {
                     NdefRecord record = msgs[0].getRecords()[0];
                     String textRecord = parseTextRecord(record);
-                    mTagText += "\ncontent:" + textRecord;
-                    mTagText += "\ncontentSize:" + contentSize + " bytes";
+                    mTagText = textRecord;
+//                    mTagText += "\ncontent:" + textRecord;
+//                    mTagText += "\ncontentSize:" + contentSize + " bytes";
                 }
             } catch (Exception e) {
             }
