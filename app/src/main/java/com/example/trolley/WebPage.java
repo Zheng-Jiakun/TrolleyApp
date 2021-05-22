@@ -23,7 +23,7 @@ public class WebPage extends AppCompatActivity {
         WebSettings webSettings = web.getSettings();
         webSettings.setJavaScriptEnabled(true);
         web.setWebViewClient(new Callback());
-        web.loadUrl("http://dmh488.resnet.ust.hk:8080/trolley");
+        web.loadUrl("http://dmh488.resnet.ust.hk:8080/");
     }
 
     private class Callback extends WebViewClient {

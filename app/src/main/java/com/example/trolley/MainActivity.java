@@ -1,5 +1,16 @@
 package com.example.trolley;
 
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.webkit.WebView;
+
+import android.webkit.WebSettings;
+import android.view.KeyEvent;
+import android.webkit.WebViewClient;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
