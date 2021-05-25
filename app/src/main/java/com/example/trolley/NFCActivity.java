@@ -15,21 +15,32 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Arrays;
 
 public class NFCActivity extends AppCompatActivity {
     private NfcAdapter mNfcAdapter;
     private PendingIntent mPendingIntent;
 
-    private TextView mContent;
-    private String mTagText;
+    private TextView textMAC;
+    private TextView textWiFi;
+    private TextView textBLE;
+    private TextView textIP;
+    private TextView textBAT;
+    private String nfcText;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nfc);
 
-        mContent = findViewById(R.id.textViewMAC);
+        textMAC = findViewById(R.id.textViewMAC);
+        textWiFi = findViewById(R.id.textViewWiFi);
+        textBLE = findViewById(R.id.textViewBLE);
+        textIP = findViewById(R.id.textViewIP);
+        textBAT = findViewById(R.id.textViewBat);
     }
 
     @Override
@@ -77,7 +88,47 @@ public class NFCActivity extends AppCompatActivity {
 //        mTagText = "type:" + ndef.getType();
 //        mTagText += "\nmaxsize:" + ndef.getMaxSize() + "bytes";
         readNfcTag(intent);
-        mContent.setText(mTagText);
+        JSONObject jsonRoot = null;
+        try {
+            jsonRoot = new JSONObject(nfcText);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            nfcText = jsonRoot.getString("MAC");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        textMAC.setText(nfcText);
+
+        try {
+            nfcText = jsonRoot.getString("BLE");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        textBLE.setText(nfcText);
+
+        try {
+            nfcText = jsonRoot.getString("BAT");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        textBAT.setText(nfcText);
+
+        try {
+            nfcText = jsonRoot.getString("IP");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        textIP.setText(nfcText);
+
+        try {
+            nfcText = jsonRoot.getString("WIFI");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        textWiFi.setText(nfcText);
     }
     /**
      * 读取NFC标签文本数据
@@ -99,7 +150,7 @@ public class NFCActivity extends AppCompatActivity {
                 if (msgs != null) {
                     NdefRecord record = msgs[0].getRecords()[0];
                     String textRecord = parseTextRecord(record);
-                    mTagText = textRecord;
+                    nfcText = textRecord;
 //                    mTagText += "\ncontent:" + textRecord;
 //                    mTagText += "\ncontentSize:" + contentSize + " bytes";
                 }

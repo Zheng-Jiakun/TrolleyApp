@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="WiFi"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:layout_span="1"
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
         </TableRow>
 
         <TableRow
@@ -64,14 +64,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="BLE"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textViewBLE"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
         </TableRow>
 
         <TableRow
@@ -83,14 +83,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="Battery"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textViewBat"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
         </TableRow>
 
         <TableRow
@@ -102,14 +102,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="IP"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textViewIP"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
         </TableRow>
 
         <TableRow
@@ -121,14 +121,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="MAC"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/textViewMAC"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="34sp" />
+                android:textSize="30sp" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
