@@ -39,20 +39,18 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:layout_span="1"
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="WiFi"
-                android:textSize="30sp" />
+                android:text="BLE"
+                android:textSize="24sp" />
 
             <TextView
-                android:layout_span="1"
-                android:id="@+id/textViewWiFi"
+                android:id="@+id/textViewBLE"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -60,18 +58,39 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
+                android:layout_span="1"
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="BLE"
-                android:textSize="30sp" />
+                android:text="WiFi"
+                android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textViewBLE"
+                android:layout_span="1"
+                android:id="@+id/textViewWiFi"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="MQTT"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textViewMQTT"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="null"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -83,14 +102,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="Battery"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textViewBat"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -102,14 +121,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="IP"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textViewIP"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -117,18 +136,18 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="MAC"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textViewMAC"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="null"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,6 +29,7 @@ public class NFCActivity extends AppCompatActivity {
     private TextView textBLE;
     private TextView textIP;
     private TextView textBAT;
+    private TextView textMQTT;
     private String nfcText;
 
     @Override
@@ -41,6 +42,7 @@ public class NFCActivity extends AppCompatActivity {
         textBLE = findViewById(R.id.textViewBLE);
         textIP = findViewById(R.id.textViewIP);
         textBAT = findViewById(R.id.textViewBat);
+        textMQTT = findViewById(R.id.textViewMQTT);
     }
 
     @Override
@@ -129,6 +131,12 @@ public class NFCActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         textWiFi.setText(nfcText);
+        try {
+            nfcText = jsonRoot.getString("MQTT");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        textMQTT.setText(nfcText);
     }
     /**
      * 读取NFC标签文本数据
